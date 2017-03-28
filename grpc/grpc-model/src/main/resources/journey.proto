@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_package = "pmackowski.grpc.model";
+
+message Journey {
+
+    string departure = 1;
+    string arrival = 2;
+    uint32 price = 3;
+
+}
+
+message JourneyQuery {
+
+    string departure = 1;
+    string arrival = 2;
+
+}
+
+service JourneyService {
+    rpc query(JourneyQuery) returns (Journey) {
+    }
+}
