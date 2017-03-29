@@ -1,3 +1,5 @@
 server.port: 9999
 
-grpc.port : 7565
+grpc:
+  journey1.port: 7777
+  journey2.port: 7778

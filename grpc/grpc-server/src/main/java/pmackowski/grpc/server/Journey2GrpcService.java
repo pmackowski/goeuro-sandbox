@@ -1,13 +1,13 @@
 package pmackowski.grpc.server;
 
 import io.grpc.stub.StreamObserver;
-import org.lognet.springboot.grpc.GRpcService;
 import pmackowski.grpc.model.JourneyOuterClass.Journey;
 import pmackowski.grpc.model.JourneyOuterClass.JourneyQuery;
 import pmackowski.grpc.model.JourneyServiceGrpc.JourneyServiceImplBase;
+import pmackowski.grpc.server.starter.GrpcEndpoint;
 
-@GRpcService
-public class JourneyGrpcService extends JourneyServiceImplBase {
+@GrpcEndpoint(portProperty = "grpc.journey2.port")
+public class Journey2GrpcService extends JourneyServiceImplBase {
 
     @Override
     public void query(JourneyQuery request, StreamObserver<Journey> responseObserver) {
